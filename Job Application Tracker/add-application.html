@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <span class="logo">Job Tracker</span>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="applications.html">Applications</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Add New Application</h1>
+
+    <form action="">
+      <label for="company-name">Company</label>
+      <input type="text" name="company-name" id="company-name">
+
+      <label for="role">Role</label>
+      <input type="text" name="role" id="role">
+
+      <label for="job-type">Job Type</label>
+      <select name="job-type" id="job-type">
+        <option value="full-time">Full-time</option>
+        <option value="part-time">Part-time</option>
+        <option value="internship">Internship</option>
+        <option value="contract">Contract</option>
+      </select>
+
+      <label for="work-mode">Work Mode</label>
+      <select name="work-mode" id="work-mode">
+        <option value="remote">Remote</option>
+        <option value="hybrid">Hybrid</option>
+        <option value="on-site">On-site</option>
+      </select>
+
+      <label for="location">Location</label>
+      <input type="text" name="location" id="location">
+
+      <label for="job-link">Job Link</label>
+      <input type="url" name="job-link" id="job-link">
+
+      <label for="apply-date">Apply Date</label>
+      <input type="date" name="apply-date" id="apply-date">
+
+      <label for="status">Application Status</label>
+      <select name="status" id="status">
+        <option value="applied">Applied</option>
+        <option value="interview">Interview</option>
+        <option value="rejected">Rejected</option>
+        <option value="offer">Offer</option>
+      </select>
+
+      <label for="notes">Notes</label>
+      <textarea name="notes" id="notes"></textarea>
+
+      <button type="submit">Add Application</button>
+    </form>
+  </main>
+</body>
+
+</html>
