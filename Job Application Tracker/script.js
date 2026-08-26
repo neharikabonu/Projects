@@ -1,6 +1,4 @@
-// ================================
-// ADD / EDIT APPLICATION
-// ================================
+//add-edit application
 
 const applicationForm =
   document.getElementById("application-form");
@@ -14,9 +12,7 @@ if (applicationForm) {
     Boolean(editApplicationId);
 
 
-  // ================================
-  // DEFAULT APPLICATION DATE
-  // ================================
+//default-application date
 
   const applyDateInput =
     document.getElementById("apply-date");
@@ -30,9 +26,7 @@ if (applicationForm) {
   }
 
 
-  // ================================
-  // FILL FORM WHEN EDITING
-  // ================================
+//fill form after editing
 
   if (isEditing) {
 
@@ -96,9 +90,7 @@ if (applicationForm) {
   }
 
 
-  // ================================
-  // FORM SUBMISSION
-  // ================================
+//form-submission logic
 
   applicationForm.addEventListener(
     "submit",
@@ -153,10 +145,7 @@ if (applicationForm) {
         ).value.trim();
 
 
-      // ================================
-      // VALIDATION
-      // ================================
-
+//form validation
       if (
         company === "" ||
         role === "" ||
@@ -180,9 +169,7 @@ if (applicationForm) {
         ) || [];
 
 
-      // ================================
-      // EDIT APPLICATION
-      // ================================
+// edit application
 
       if (isEditing) {
 
@@ -209,9 +196,7 @@ if (applicationForm) {
       }
 
 
-      // ================================
-      // ADD APPLICATION
-      // ================================
+//add - application
 
       else {
 
@@ -234,10 +219,7 @@ if (applicationForm) {
       }
 
 
-      // ================================
-      // SAVE
-      // ================================
-
+//save
       localStorage.setItem(
         "applications",
         JSON.stringify(
@@ -251,41 +233,16 @@ if (applicationForm) {
       );
 
 
-      // ================================
-      // CLEAR FORM
-      // ================================
-
-      applicationForm.reset();
-
-
-      // ================================
-      // SUCCESS MESSAGE
-      // ================================
-
-      const message =
-        document.createElement("p");
-
-      message.textContent =
-        isEditing
-          ? "Application updated successfully!"
-          : "Application submitted successfully!";
-
-      message.classList.add(
-        "success-message"
-      );
-
-      applicationForm.appendChild(
-        message
-      );
+//redirection
+      window.location.href =
+        "applications.html";
 
     }
   );
 }
 
 
-// ================================
-// APPLICATIONS LIST
-// ================================
+//list of applications
 
 const applicationsList =
   document.getElementById(
@@ -302,9 +259,7 @@ if (applicationsList) {
     ) || [];
 
 
-  // ================================
-  // EMPTY STATE
-  // ================================
+//final if empty state of applications
 
   if (applications.length === 0) {
 
@@ -356,9 +311,7 @@ if (applicationsList) {
   }
 
 
-  // ================================
-  // DISPLAY APPLICATIONS
-  // ================================
+//view applications
 
   applications.forEach(
     (application) => {
@@ -508,18 +461,12 @@ if (applicationsList) {
   );
 
 
-  // ================================
-  // EVENT DELEGATION
-  // ================================
-
   applicationsList.addEventListener(
     "click",
     (event) => {
 
 
-      // ================================
-      // DELETE
-      // ================================
+      //delete
 
       if (
         event.target.classList.contains(
@@ -733,9 +680,7 @@ if (applicationsList) {
   );
 
 
-  // ================================
-  // STATUS CHANGE
-  // ================================
+//application-status change
 
   applicationsList.addEventListener(
     "change",
@@ -798,9 +743,7 @@ if (applicationsList) {
 }
 
 
-// ================================
-// DASHBOARD STATISTICS
-// ================================
+//dashboard
 
 const totalApplications =
   document.getElementById(
@@ -845,35 +788,35 @@ if (totalApplications) {
     ).length;
 
 
-  // Total
+  //total
   document.getElementById(
     "total-applications"
   ).textContent =
     applications.length;
 
 
-  // Applied
+  //applied
   document.getElementById(
     "applied-applications"
   ).textContent =
     appliedCount;
 
 
-  // Interviews
+  //interviews
   document.getElementById(
     "interview-applications"
   ).textContent =
     interviewCount;
 
 
-  // Offers
+  //offers
   document.getElementById(
     "offer-applications"
   ).textContent =
     offerCount;
 
 
-  // Rejected
+  //rejected
   const rejectedApplications =
     document.getElementById(
       "rejected-applications"
