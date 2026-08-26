@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
+
 <body>
   <nav class="navbar">
-    <span class="logo">Job Tracker</span>
+    <a href="index.html" class="logo">
+      <span class="logo-icon">JT</span>
+      <span>Job Tracker</span>
+    </a>
 
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -17,8 +23,41 @@
     </ul>
   </nav>
 
-  <main>
+  <main class="dashboard-page">
+
     <h1>Dashboard</h1>
+
+    <p class="total-applications">
+      Applications: <span id="total-applications">0</span>
+    </p>
+
+    <div class="dashboard-stats">
+
+      <div class="stat-card applied">
+        <h2>Applied</h2>
+        <p id="applied-applications">0</p>
+      </div>
+
+      <div class="stat-card interview">
+        <h2>Interviews</h2>
+        <p id="interview-applications">0</p>
+      </div>
+
+      <div class="stat-card rejected">
+        <h2>Rejected</h2>
+        <p id="rejected-applications">0</p>
+      </div>
+
+      <div class="stat-card offer">
+        <h2>Offers</h2>
+        <p id="offer-applications">0</p>
+      </div>
+
+    </div>
+
   </main>
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
+
 </html>

@@ -6,11 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add Application</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 
 <body>
+
   <nav class="navbar">
-    <span class="logo">Job Tracker</span>
+    <a href="index.html" class="logo">
+      <span class="logo-icon">JT</span>
+      <span>Job Tracker</span>
+    </a>
 
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -19,54 +24,61 @@
     </ul>
   </nav>
 
-  <main>
-    <h1>Add New Application</h1>
+  <main class="add-application-page">
 
-    <form action="">
-      <label for="company-name">Company</label>
-      <input type="text" name="company-name" id="company-name">
+    <h1 id="form-title">Add New Application</h1>
 
-      <label for="role">Role</label>
-      <input type="text" name="role" id="role">
+    <form id="application-form">
 
-      <label for="job-type">Job Type</label>
-      <select name="job-type" id="job-type">
-        <option value="full-time">Full-time</option>
-        <option value="part-time">Part-time</option>
-        <option value="internship">Internship</option>
-        <option value="contract">Contract</option>
-      </select>
+  <label for="company-name">Company</label>
+  <input type="text" name="company-name" id="company-name" required>
 
-      <label for="work-mode">Work Mode</label>
-      <select name="work-mode" id="work-mode">
-        <option value="remote">Remote</option>
-        <option value="hybrid">Hybrid</option>
-        <option value="on-site">On-site</option>
-      </select>
+  <label for="role">Role</label>
+  <input type="text" name="role" id="role" required>
 
-      <label for="location">Location</label>
-      <input type="text" name="location" id="location">
+  <label for="job-type">Job Type</label>
+  <select name="job-type" id="job-type" required>
+    <option value="full-time">Full-time</option>
+    <option value="part-time">Part-time</option>
+    <option value="internship">Internship</option>
+    <option value="contract">Contract</option>
+  </select>
 
-      <label for="job-link">Job Link</label>
-      <input type="url" name="job-link" id="job-link">
+  <label for="work-mode">Work Mode</label>
+  <select name="work-mode" id="work-mode" required>
+    <option value="remote">Remote</option>
+    <option value="hybrid">Hybrid</option>
+    <option value="on-site">On-site</option>
+  </select>
 
-      <label for="apply-date">Apply Date</label>
-      <input type="date" name="apply-date" id="apply-date">
+  <label for="location">Location</label>
+  <input type="text" name="location" id="location" required>
 
-      <label for="status">Application Status</label>
-      <select name="status" id="status">
-        <option value="applied">Applied</option>
-        <option value="interview">Interview</option>
-        <option value="rejected">Rejected</option>
-        <option value="offer">Offer</option>
-      </select>
+  <label for="job-link">Job Link</label>
+  <input type="url" name="job-link" id="job-link">
 
-      <label for="notes">Notes</label>
-      <textarea name="notes" id="notes"></textarea>
+  <label for="apply-date">Apply Date</label>
+  <input type="date" name="apply-date" id="apply-date" required>
 
-      <button type="submit">Add Application</button>
-    </form>
+  <label for="status">Application Status</label>
+  <select name="status" id="status" required>
+    <option value="applied">Applied</option>
+    <option value="interview">Interview</option>
+    <option value="rejected">Rejected</option>
+    <option value="offer">Offer</option>
+  </select>
+
+  <label for="notes">Notes</label>
+  <textarea name="notes" id="notes"></textarea>
+
+  <button type="submit" id="submit-button">Add Application</button>
+
+</form>
+
   </main>
+
+  <script src="script.js"></script>
+
 </body>
 
 </html>

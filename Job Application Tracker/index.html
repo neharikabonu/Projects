@@ -5,31 +5,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Job Application Tracker</title>
+
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 
 <body>
+
   <nav class="navbar">
-    <span class="logo">Job Tracker</span>
+
+    <a href="index.html" class="logo">
+      <span class="logo-icon">JT</span>
+      <span>Job Tracker</span>
+    </a>
 
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="applications.html">Applications</a></li>
       <li><a href="dashboard.html">Dashboard</a></li>
     </ul>
+
   </nav>
 
+
   <main class="home-page">
+
+    <!-- Animated background elements -->
+    <div class="floating-circle"></div>
+    <div class="floating-circle-small"></div>
+    <div class="career-path"></div>
+
+
+    <!-- Existing homepage content -->
     <section>
-      <h1 class="heading">Track Your Job Applications</h1>
-      <p class="description">Keep your job search organized and never lose track of an opportunity.</p>
-      <button class="add-application">Add Application</button>
-      <button class="view-applications">View Applications</button>
+
+      <h1 class="heading">
+        Track Your Job Applications
+      </h1>
+
+      <p class="description">
+        Keep your job search organized and never lose track of an opportunity.
+      </p>
+
+      <div class="buttons">
+
+        <a href="add-application.html" class="add-application">
+          Add Application
+        </a>
+
+        <a href="applications.html" class="view-applications">
+          View Applications
+        </a>
+
+      </div>
+
     </section>
 
   </main>
+
+
   <!-- JS -->
   <script src="script.js"></script>
+
 </body>
 
 </html>
